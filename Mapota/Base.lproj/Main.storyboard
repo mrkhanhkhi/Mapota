@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="778" y="-994"/>
         </scene>
-        <!--View Controller-->
+        <!--Mapota-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="mapVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Mapota" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,7 +184,7 @@
                             <constraint firstItem="Yvy-B5-afi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gyc-bO-iOH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pMK-UM-3vB"/>
+                    <navigationItem key="navigationItem" title="Mapota" id="pMK-UM-3vB"/>
                     <connections>
                         <outlet property="endPointButton" destination="JtH-hW-BPR" id="dgz-24-IeT"/>
                         <outlet property="locationButton" destination="bVw-M3-U4f" id="DzD-1m-pMZ"/>
@@ -232,7 +232,7 @@
             <objects>
                 <navigationController title="Mapota" automaticallyAdjustsScrollViewInsets="NO" id="hRX-Mp-MgD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yJe-wW-JyV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yJe-wW-JyV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
