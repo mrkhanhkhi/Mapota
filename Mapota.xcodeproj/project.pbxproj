@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D7011851DAF412700AE6F9B /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7011841DAF412700AE6F9B /* SearchController.swift */; };
+		C6059B621DABE42100CA3DDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6059B611DABE42100CA3DDE /* AppDelegate.swift */; };
+		C6059B641DABE42100CA3DDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6059B631DABE42100CA3DDE /* ViewController.swift */; };
+		C6059B671DABE42100CA3DDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6059B651DABE42100CA3DDE /* Main.storyboard */; };
+		C6059B691DABE42100CA3DDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6059B681DABE42100CA3DDE /* Assets.xcassets */; };
+		C6059B6C1DABE42100CA3DDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6059B6A1DABE42100CA3DDE /* LaunchScreen.storyboard */; };
+		C6059B771DABE42200CA3DDE /* MapotaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6059B761DABE42200CA3DDE /* MapotaTests.swift */; };
+		C6059B821DABE42200CA3DDE /* MapotaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6059B811DABE42200CA3DDE /* MapotaUITests.swift */; };
+		C692945A1DABF7EA00424974 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69294591DABF7EA00424974 /* CustomAnnotation.swift */; };
+		C692945C1DACCE4E00424974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C692945B1DACCE4E00424974 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6059B731DABE42200CA3DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6059B561DABE42100CA3DDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6059B5D1DABE42100CA3DDE;
+			remoteInfo = Mapota;
+		};
+		C6059B7E1DABE42200CA3DDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6059B561DABE42100CA3DDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6059B5D1DABE42100CA3DDE;
+			remoteInfo = Mapota;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D7011841DAF412700AE6F9B /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		C6059B5E1DABE42100CA3DDE /* Mapota.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapota.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6059B611DABE42100CA3DDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C6059B631DABE42100CA3DDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6059B661DABE42100CA3DDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6059B681DABE42100CA3DDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Mapota/Assets.xcassets; sourceTree = "<group>"; };
+		C6059B6B1DABE42100CA3DDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C6059B6D1DABE42100CA3DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6059B721DABE42200CA3DDE /* MapotaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapotaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6059B761DABE42200CA3DDE /* MapotaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapotaTests.swift; sourceTree = "<group>"; };
+		C6059B781DABE42200CA3DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6059B7D1DABE42200CA3DDE /* MapotaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapotaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6059B811DABE42200CA3DDE /* MapotaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapotaUITests.swift; sourceTree = "<group>"; };
+		C6059B831DABE42200CA3DDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69294591DABF7EA00424974 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		C692945B1DACCE4E00424974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6059B5B1DABE42100CA3DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B6F1DABE42200CA3DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B7A1DABE42200CA3DDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6059B551DABE42100CA3DDE = {
+			isa = PBXGroup;
+			children = (
+				C6059B601DABE42100CA3DDE /* Mapota */,
+				C6059B751DABE42200CA3DDE /* MapotaTests */,
+				C6059B801DABE42200CA3DDE /* MapotaUITests */,
+				C6059B5F1DABE42100CA3DDE /* Products */,
+				C6059B681DABE42100CA3DDE /* Assets.xcassets */,
+			);
+			sourceTree = "<group>";
+		};
+		C6059B5F1DABE42100CA3DDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6059B5E1DABE42100CA3DDE /* Mapota.app */,
+				C6059B721DABE42200CA3DDE /* MapotaTests.xctest */,
+				C6059B7D1DABE42200CA3DDE /* MapotaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6059B601DABE42100CA3DDE /* Mapota */ = {
+			isa = PBXGroup;
+			children = (
+				C6059B611DABE42100CA3DDE /* AppDelegate.swift */,
+				C6059B631DABE42100CA3DDE /* ViewController.swift */,
+				9D7011841DAF412700AE6F9B /* SearchController.swift */,
+				C69294591DABF7EA00424974 /* CustomAnnotation.swift */,
+				C6059B651DABE42100CA3DDE /* Main.storyboard */,
+				C6059B6A1DABE42100CA3DDE /* LaunchScreen.storyboard */,
+				C692945B1DACCE4E00424974 /* Assets.xcassets */,
+				C6059B6D1DABE42100CA3DDE /* Info.plist */,
+			);
+			path = Mapota;
+			sourceTree = "<group>";
+		};
+		C6059B751DABE42200CA3DDE /* MapotaTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6059B761DABE42200CA3DDE /* MapotaTests.swift */,
+				C6059B781DABE42200CA3DDE /* Info.plist */,
+			);
+			path = MapotaTests;
+			sourceTree = "<group>";
+		};
+		C6059B801DABE42200CA3DDE /* MapotaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C6059B811DABE42200CA3DDE /* MapotaUITests.swift */,
+				C6059B831DABE42200CA3DDE /* Info.plist */,
+			);
+			path = MapotaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6059B5D1DABE42100CA3DDE /* Mapota */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6059B861DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "Mapota" */;
+			buildPhases = (
+				C6059B5A1DABE42100CA3DDE /* Sources */,
+				C6059B5B1DABE42100CA3DDE /* Frameworks */,
+				C6059B5C1DABE42100CA3DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mapota;
+			productName = Mapota;
+			productReference = C6059B5E1DABE42100CA3DDE /* Mapota.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6059B711DABE42200CA3DDE /* MapotaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6059B891DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "MapotaTests" */;
+			buildPhases = (
+				C6059B6E1DABE42200CA3DDE /* Sources */,
+				C6059B6F1DABE42200CA3DDE /* Frameworks */,
+				C6059B701DABE42200CA3DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6059B741DABE42200CA3DDE /* PBXTargetDependency */,
+			);
+			name = MapotaTests;
+			productName = MapotaTests;
+			productReference = C6059B721DABE42200CA3DDE /* MapotaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6059B7C1DABE42200CA3DDE /* MapotaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6059B8C1DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "MapotaUITests" */;
+			buildPhases = (
+				C6059B791DABE42200CA3DDE /* Sources */,
+				C6059B7A1DABE42200CA3DDE /* Frameworks */,
+				C6059B7B1DABE42200CA3DDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6059B7F1DABE42200CA3DDE /* PBXTargetDependency */,
+			);
+			name = MapotaUITests;
+			productName = MapotaUITests;
+			productReference = C6059B7D1DABE42200CA3DDE /* MapotaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6059B561DABE42100CA3DDE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Nguyen Duy Khanh";
+				TargetAttributes = {
+					C6059B5D1DABE42100CA3DDE = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NW9D67J4FE;
+						ProvisioningStyle = Automatic;
+					};
+					C6059B711DABE42200CA3DDE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6059B5D1DABE42100CA3DDE;
+					};
+					C6059B7C1DABE42200CA3DDE = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C6059B5D1DABE42100CA3DDE;
+					};
+				};
+			};
+			buildConfigurationList = C6059B591DABE42100CA3DDE /* Build configuration list for PBXProject "Mapota" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6059B551DABE42100CA3DDE;
+			productRefGroup = C6059B5F1DABE42100CA3DDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6059B5D1DABE42100CA3DDE /* Mapota */,
+				C6059B711DABE42200CA3DDE /* MapotaTests */,
+				C6059B7C1DABE42200CA3DDE /* MapotaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6059B5C1DABE42100CA3DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6059B6C1DABE42100CA3DDE /* LaunchScreen.storyboard in Resources */,
+				C6059B691DABE42100CA3DDE /* Assets.xcassets in Resources */,
+				C692945C1DACCE4E00424974 /* Assets.xcassets in Resources */,
+				C6059B671DABE42100CA3DDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B701DABE42200CA3DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B7B1DABE42200CA3DDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6059B5A1DABE42100CA3DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6059B641DABE42100CA3DDE /* ViewController.swift in Sources */,
+				9D7011851DAF412700AE6F9B /* SearchController.swift in Sources */,
+				C6059B621DABE42100CA3DDE /* AppDelegate.swift in Sources */,
+				C692945A1DABF7EA00424974 /* CustomAnnotation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B6E1DABE42200CA3DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6059B771DABE42200CA3DDE /* MapotaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6059B791DABE42200CA3DDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6059B821DABE42200CA3DDE /* MapotaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6059B741DABE42200CA3DDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6059B5D1DABE42100CA3DDE /* Mapota */;
+			targetProxy = C6059B731DABE42200CA3DDE /* PBXContainerItemProxy */;
+		};
+		C6059B7F1DABE42200CA3DDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6059B5D1DABE42100CA3DDE /* Mapota */;
+			targetProxy = C6059B7E1DABE42200CA3DDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C6059B651DABE42100CA3DDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6059B661DABE42100CA3DDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C6059B6A1DABE42100CA3DDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6059B6B1DABE42100CA3DDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6059B841DABE42200CA3DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6059B851DABE42200CA3DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6059B871DABE42200CA3DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NW9D67J4FE;
+				INFOPLIST_FILE = Mapota/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.khanhND.Mapota;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C6059B881DABE42200CA3DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NW9D67J4FE;
+				INFOPLIST_FILE = Mapota/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.khanhND.Mapota;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C6059B8A1DABE42200CA3DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MapotaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khanhND.MapotaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mapota.app/Mapota";
+			};
+			name = Debug;
+		};
+		C6059B8B1DABE42200CA3DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MapotaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khanhND.MapotaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mapota.app/Mapota";
+			};
+			name = Release;
+		};
+		C6059B8D1DABE42200CA3DDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MapotaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khanhND.MapotaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mapota;
+			};
+			name = Debug;
+		};
+		C6059B8E1DABE42200CA3DDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = MapotaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khanhND.MapotaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Mapota;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6059B591DABE42100CA3DDE /* Build configuration list for PBXProject "Mapota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6059B841DABE42200CA3DDE /* Debug */,
+				C6059B851DABE42200CA3DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6059B861DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "Mapota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6059B871DABE42200CA3DDE /* Debug */,
+				C6059B881DABE42200CA3DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6059B891DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "MapotaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6059B8A1DABE42200CA3DDE /* Debug */,
+				C6059B8B1DABE42200CA3DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6059B8C1DABE42200CA3DDE /* Build configuration list for PBXNativeTarget "MapotaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6059B8D1DABE42200CA3DDE /* Debug */,
+				C6059B8E1DABE42200CA3DDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6059B561DABE42100CA3DDE /* Project object */;
+}
