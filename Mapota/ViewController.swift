@@ -16,16 +16,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBOutlet weak var startPointButton: UIButton!
     @IBOutlet weak var endPointButton: UIButton!
     
+    @IBOutlet weak var swapButton: UIButton!
     @IBOutlet weak var locationButton: UIButton!
     var checkPoint : Bool?
     var firstAnotation = MKPointAnnotation()
     var secondAnotation = MKPointAnnotation()
     var firstPlaceMark : MKPlacemark?
     var secondPlaceMark : MKPlacemark?
+    var locationTuples: [(button:UIButton?, mapItem: MKMapItem?)]!
     
     @IBOutlet weak var vehicleSegment: UISegmentedControl!
     @IBOutlet weak var searchView: UIView!
     override func viewDidLoad() {
+        locationTuples = [(startPointButton, nil), (endPointButton, nil)]
         super.viewDidLoad()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -136,6 +139,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         let annotation = CustomAnnotation(title: "Khanh's House", subtitle: "Vinh Tuy, Ha Noi", coordinate: CLLocationCoordinate2D(latitude:(currentLocation?.latitude)!, longitude: (currentLocation?.longitude)!))
         mapView.addAnnotation(annotation)
     }
+    
+    @IBAction func swapLocations(_ sender: AnyObject) {
+       
+    }
+    
     
     func customizingSearchView() {
         searchView.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
