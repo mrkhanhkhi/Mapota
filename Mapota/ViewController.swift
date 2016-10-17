@@ -64,11 +64,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     }
     
     //Update vi tri
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let currentLocation = locations.last
-        let region = MKCoordinateRegion(center: (currentLocation?.coordinate)!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-        mapView.setRegion(region, animated: true)
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        let currentLocation = locations.last
+//        let region = MKCoordinateRegion(center: (currentLocation?.coordinate)!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+//        mapView.setRegion(region, animated: true)
+//    }
     
     @IBAction func getDirection(_ sender: AnyObject) {
         print(firstAnotation.coordinate, secondAnotation.coordinate)
@@ -116,6 +116,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         return renderer
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? CustomAnnotation {
+            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: "CustomAnnotationView")
+            if pinView == nil {
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: "CustomAnnotationView")
+                pinView?.rightCalloutAccessoryView = UIButton(type:.detailDisclosure)
+                pinView?.canShowCallout = true
+                pinView?.calloutOffset = CGPoint(x: 0, y: 4)
+                pinView?.contentMode = .scaleAspectFill
+            } else {
+                pinView?.annotation = annotation
+            }
+                pinView?.image = annotation.image
+            return pinView
+        }
+        
+        return nil
+    }
+    
     @IBAction func segmentIndexChanged(_ sender: AnyObject) {
         switch vehicleSegment.selectedSegmentIndex
         {
@@ -135,8 +154,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     @IBAction func showLocation(_ sender: AnyObject) {
         locationManager.startUpdatingLocation()
         mapView.showsUserLocation = true
+//        let currentLocation = locationManager.location?.coordinate
         let currentLocation = locationManager.location?.coordinate
-        let annotation = CustomAnnotation(title: "Khanh's House", subtitle: "Vinh Tuy, Ha Noi", coordinate: CLLocationCoordinate2D(latitude:(currentLocation?.latitude)!, longitude: (currentLocation?.longitude)!))
+        let region = MKCoordinateRegion(center: (currentLocation)!, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        mapView.setRegion(region, animated: true)
+        let annotation = CustomAnnotation(title: "Khanh' house", subtitle: "Ha Noi", coordinate: CLLocationCoordinate2D(latitude:(currentLocation?.latitude)!, longitude:(currentLocation?.longitude)!), image: UIImage(named: "location_pin")!)
+            //        let annotation = CustomAnnotation(title: "Khanh's House", subtitle: "Vinh Tuy, Ha Noi", coordinate: CLLocationCoordinate2D(latitude:(currentLocation?.latitude)!, longitude: (currentLocation?.longitude)!), image:UIImage(named:"location_pin")!)
         mapView.addAnnotation(annotation)
     }
     
@@ -146,15 +169,38 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
     
     
     func customizingSearchView() {
-        searchView.backgroundColor = UIColor(white: 1.0, alpha: 0.5)
         searchView.layer.cornerRadius = 10.0
         searchView.layer.borderColor = UIColor.gray.cgColor
         searchView.layer.borderWidth = 0.5
         searchView.clipsToBounds = true
         startPointButton.titleLabel?.adjustsFontSizeToFitWidth = true
         endPointButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        startPointButton.layer.borderWidth = 1
+        startPointButton.layer.borderColor = UIColor.black.cgColor
+        endPointButton.layer.borderWidth = 1
+        endPointButton.layer.borderColor = UIColor.black.cgColor
     }
     
+}
+
+extension UISegmentedControl {
+    func removeBorders() {
+        setBackgroundImage(imageWithColor(color: tintColor), for: .selected, barMetrics: .default)
+        setBackgroundImage(imageWithColor(color: tintColor), for: .selected, barMetrics: .default)
+        setDividerImage(imageWithColor(color:UIColor.clear), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+    }
+    
+    // create a 1x1 image with this color
+    private func imageWithColor(color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        context!.setFillColor(color.cgColor);
+        context!.fill(rect);
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return image!
+    }
 }
 
 extension ViewController : SearchProtocol{
@@ -188,4 +234,6 @@ extension ViewController : SearchProtocol{
     }
     
 }
+
+
 

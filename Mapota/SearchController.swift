@@ -20,7 +20,9 @@ class SearchController: UIViewController {
     weak var searchDelegate : SearchProtocol?
     var region : MKCoordinateRegion?
     var addressResult : [MKMapItem] = []
+    var fileterdAdd:[MKMapItem] = []
     var checkPoint : Bool?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,12 @@ class SearchController: UIViewController {
         mySearchBar.delegate = self
         mySearchBar.placeholder = "Input Location Here !"
         mySearchBar.searchBarStyle = .minimal
-        // Do any additional setup after loading the view.
+//        var leftNavBarButton = UIBarButtonItem(customView:mySearchBar)
+//        var cancelButotn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: <#T##Selector?#>)
+//        self.navigationItem.leftBarButtonItem = leftNavBarButton
+//        self.navigationItem.rightBarButtonItem = UIButtonType.cancel
         addGestureToTableView()
+        
     }
     
     func addGestureToTableView() {
@@ -82,8 +88,15 @@ extension SearchController : UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let mapItem = addressResult[indexPath.row]
         cell.textLabel?.text = mapItem.name
-        cell.detailTextLabel?.text = mapItem.phoneNumber
         return cell
+    }
+    
+    func filterTableViewForEnterText(searchText: String) {
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
+        
+        let array = (self.addressResult as NSArray).filtered(using: searchPredicate)
+        self.fileterdAdd = array as! [MKMapItem]
+        self.myTableView.reloadData()
     }
     
 }
@@ -97,6 +110,7 @@ extension SearchController : UITableViewDelegate{
     }
     
 }
+
 
 extension SearchController : UISearchBarDelegate{
     
@@ -137,5 +151,6 @@ extension SearchController : UISearchBarDelegate{
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         print("cancel button")
     }
+    
     
 }
