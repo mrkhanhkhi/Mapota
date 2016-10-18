@@ -31,10 +31,6 @@ class SearchController: UIViewController {
         mySearchBar.delegate = self
         mySearchBar.placeholder = "Input Location Here !"
         mySearchBar.searchBarStyle = .minimal
-//        var leftNavBarButton = UIBarButtonItem(customView:mySearchBar)
-//        var cancelButotn = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: <#T##Selector?#>)
-//        self.navigationItem.leftBarButtonItem = leftNavBarButton
-//        self.navigationItem.rightBarButtonItem = UIButtonType.cancel
         addGestureToTableView()
         
     }
@@ -67,8 +63,8 @@ class SearchController: UIViewController {
     }
     
     func filterContentForSearchText(searchText: String) {
-        fileterdAdd = addressResult.filter({(addressResult) -> Bool in
-            let nameMatch = addressResult.name?.range(of: searchText, options:.caseInsensitive, range: nil, locale: nil)
+        fileterdAdd = addressResult.filter({(addressfilterd:MKMapItem) -> Bool in
+            let nameMatch = addressfilterd.name?.range(of: searchText, options:.caseInsensitive)
             return nameMatch != nil
         })
     }
@@ -104,15 +100,6 @@ extension SearchController : UITableViewDataSource{
         cell.textLabel?.text = mapItem.name
         return cell
     }
-    
-    func filterTableViewForEnterText(searchText: String) {
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchText)
-        
-        let array = (self.addressResult as NSArray).filtered(using: searchPredicate)
-        self.fileterdAdd = array as! [MKMapItem]
-        self.myTableView.reloadData()
-    }
-    
 }
 
 extension SearchController : UITableViewDelegate{
