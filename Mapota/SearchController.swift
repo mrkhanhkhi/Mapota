@@ -65,7 +65,21 @@ class SearchController: UIViewController {
             
         }
     }
+    
+    func filterContentForSearchText(searchText: String) {
+        fileterdAdd = addressResult.filter({(addressResult) -> Bool in
+            let nameMatch = addressResult.name?.range(of: searchText, options:.caseInsensitive, range: nil, locale: nil)
+            return nameMatch != nil
+        })
+    }
 
+}
+
+extension SearchController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
+        myTableView.reloadData()
+    }
 }
 
 extension SearchController : UIGestureRecognizerDelegate{
